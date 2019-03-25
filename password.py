@@ -1,23 +1,17 @@
 
+pwd = 'a123456' #如果以後要改密碼，直接改這一行就好了
+i = 3 #剩餘機會
+
 while True:
-	password = input('請輸入密碼，最多輸入3次密碼:')
-	if password == 'a123456':
+	password = input('請輸入密碼:')
+	if password == pwd:
 		print('登入成功!')
 		break
 	else:
-		password2 = input('密碼錯誤! 還有2次機會:')
-		if password2 == 'a123456':
-			print('登入成功!')
+		i = i - 1
+		print ('密碼錯誤! 還有', i, '次機會')
+		if i == 0:
 			break
-		else:
-			password3 = input('密碼錯誤! 還有1次機會:')
-			if password3 == 'a123456':
-				print('登入成功!')
-				break
-			else:
-				print('密碼錯誤3次，無法登入!')
-				break
-
 
 
 
